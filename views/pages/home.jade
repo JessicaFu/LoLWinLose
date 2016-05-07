@@ -1,0 +1,21 @@
+extends /views/templates/main.jade
+
+block content
+
+	div(ng-controller="mainCtrl")
+		#type #{type}
+		#message #{message}
+
+		include /views/partials/login.jade
+		include /views/partials/signup.jade
+		include /views/partials/profile.jade
+		include /views/partials/logout.jade
+		br
+		br
+		br
+		include /views/partials/tripsList.jade
+		br
+		br
+		br
+		include /views/partials/yourTrip.jade
+

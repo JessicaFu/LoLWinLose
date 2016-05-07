@@ -1,0 +1,24 @@
+if user && user.local
+	#emailInput #{user.local.email}
+	#passwordInput #{user.local.password}
+else
+	#emailInput
+	#passwordInput
+
+if user && user.facebook
+	#fbDisplayName #{user.facebook.displayName}
+	#fbName #{user.facebook.name}
+else
+	#fbDisplayName
+	#fbName
+
+if user
+	#infoInput #{user.info}
+else
+	#infoInput
+
+#profileStatus
+
+#showProfileBttn(class="btn btn-primary" ng-click="getProfile()") Show Your Profile
+#showOthersProfileBttn(class="btn btn-primary" ng-click="getUser()") {{others_email}}
+#saveProfileBttn(class="btn btn-primary" ng-click="saveProfile()") Save Profile

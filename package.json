@@ -1,0 +1,26 @@
+{
+  "name": "TripShare",
+  "version": "0.0.1",
+  "description": "CS132 final project",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^1.1.0",
+    "consolidate": "^0.14.0",
+    "cookie-parser": "*",
+    "express": "*",
+    "express-session": "*",
+    "jade": "*",
+    "mongoose": "*",
+    "morgan": "*",
+    "mustache": "*",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.0",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "^2.3.0",
+    "session": "^0.1.0",
+    "yelp": "^1.0.1"
+  },
+  "engine": "node 0.6.x"
+}

@@ -1,9 +1,5 @@
-var app = angular.module("TripShareApp", []);
+var app = angular.module("LoLWinLose", []);
 
-app.service("util", function(apiGet, apiPost, apiPut, apiDelete, helper) {
+app.service("util", function(apiGet) {
 	this.apiGet = apiGet;
-	this.apiPost = apiPost;
-	this.apiPut = apiPut;
-	this.apiDelete = apiDelete;
-	this.helper = helper;
 });

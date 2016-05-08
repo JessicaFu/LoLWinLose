@@ -1,21 +1,22 @@
 extends /views/templates/main.jade
 
 block content
-
-	div(ng-controller="mainCtrl")
-		#type #{type}
-		#message #{message}
-
-		include /views/partials/login.jade
-		include /views/partials/signup.jade
-		include /views/partials/profile.jade
-		include /views/partials/logout.jade
-		br
-		br
-		br
-		include /views/partials/tripsList.jade
-		br
-		br
-		br
-		include /views/partials/yourTrip.jade
+	#wrapper(ng-controller="mainCtrl")
+		#innerContainer
+			.row-fluid
+				div.col-lg-4.col-lg-offset-4
+					span Win or lose. Enter your summoner name below to find out.
+			.row-fluid
+				div.col-lg-4.col-lg-offset-4
+					div.input-group
+						input.form-control(type="text" ng-model="summonerName")
+						span.input-group-btn
+							button.btn.btn-default(type="button" ng-click="calculate()") Calculate
+			#results(style="display:none;")
+				.row-fluid
+					div.col-lg-8.col-lg-offset-2
+						span Here's what we think...
+				.row-fluid
+					div.col-lg-8.col-lg-offset-2
+						span {{endResult}}
 

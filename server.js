@@ -1,23 +1,13 @@
 var port = process.env.PORT || 3000;
 
-var dbUrl = "mongodb://admin:admin@ds015780.mlab.com:15780/tripshare";
-
-//setup mongoDb
-var dbModels = require("./init/dbConnect")(dbUrl);
-
-//setup passport auth
-var passport = require('./init/authentication')(dbModels);
-
 //setup express middleware
-var app = require("./init/middleware")(passport, dbModels);
+var app = require("./init/middleware")();
 
 //setup server routes
-var serverRoutes = require("./init/serverRoutes")(passport, dbModels);
-//setup api routes
-var apiRoutes = require("./init/apiRoutes")(dbModels);
+var serverRoutes = require("./init/serverRoutes")();
+
 //define routes
 app.use("/", serverRoutes);
-app.use("/api", apiRoutes);
 
 //add last middleware for error handling
 app.use(function (err, req, res, next) {
@@ -33,5 +23,5 @@ var server = app.listen(port, function () {
 	var host = server.address().address
 	var port = server.address().port
 
-	console.log("TripShare listening at http://%s:%s", host, port)
+	console.log("LoLWinLose listening at http://%s:%s", host, port)
 });
